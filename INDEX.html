@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE> 
 <html>
 
 
@@ -54,9 +54,10 @@ ul {
 
 	/* imagem de fundo */
 
-.fundo {
-	max-width: 100%;
+.fundinho {
+	max-width: 200%;
   	height: 700px;
+    display: block;
   }
 
 
@@ -64,6 +65,7 @@ ul {
 	/* alinhamento do título "sobre mim" */
 
 h1 {
+	margin-top: 50px;
 	text-align: center;
     font-family: "kallisto", sans-serif;
     color: #ccccff;
@@ -81,13 +83,12 @@ font-style: normal;
 color: #FAEBD7;
 }
 
-	/* alinhamento do texto "softwares" na página */
-
-h2 {
-font-family: "vandertak-regular", sans-serif;
-	text-align: center;
-    font-size: 30px;
-	font-style: normal;
+.imgeu {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 50%;
 }
 
 
@@ -128,7 +129,7 @@ display: block;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #D2691E;
+  background-color: #000033;
   margin-left: auto;
 }
 
@@ -161,6 +162,7 @@ display: block;
   
 }
 .grid-container > div {
+	font-family:"eurostile", sans-serif;
   text-align: center;
   padding: 20px 0;
   font-size: 25px;
@@ -181,14 +183,13 @@ display: block;
 
 
 <!--criação de div para imagem de backgroud -->
-<div class="fundo" style="background-image: url('https://i.postimg.cc/QC3ScYyS/aesthetic-wallpaper-1.jpg');background-repeat: round;background-size: 100% 100%;align-items: center;display: flex;">
+<div class="fundinho" style="background-image: url('https://i.postimg.cc/QC3ScYyS/aesthetic-wallpaper-1.jpg');background-repeat: round;background-size: 100% 100%;">
 
 
-<h1>
+<h1 style="text-align:center;">
 Sobre Mim
 
 </h1>
-
 
 
 <p>
@@ -198,6 +199,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at porta eros, id 
 
 
 </p>
+
+<img src="https://i.postimg.cc/gjGH26ZS/Whats-App-Image-2024-11-06-at-14-09-10.jpg" style="width:300px;height:300px;" class="imgeu">
 
 
 </div>
