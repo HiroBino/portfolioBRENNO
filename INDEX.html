@@ -1,19 +1,299 @@
 <!DOCTYPE html>
-<html>
+
+
+<head>
+<title>Cubismo Portifolio</title>
+<style>
+
+body {
+  margin: 0px;
+
+	/* estilização da barra de navegação */
+
+}
+
+.header {
+  font-family: "kallisto", sans-serif;
+font-weight: 600;
+font-style: normal;
+  padding: 0px;
+  text-align: left;
+  font-size: 25px;
+  color: white;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  background-color: #000000;
+  width: 100%;
+  top: 0;
+} 
+
+  li {
+  display: inline;
+  float: left;
+}
+
+  li a {
+    display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+  li a:hover {
+  	background-color: #000033;
+}
+
+	/* imagem de fundo */
+
+.fundo {
+	max-width: 100%;
+  	height: 700px;
+  }
+
+
+
+	/* alinhamento do título "sobre mim" */
+
+h1 {
+	text-align: center;
+    font-family: "kallisto", sans-serif;
+    color: #ccccff;
+    font-size: 45px;
+}
+
+	/* alinhamento do texto corrido na página */
+
+p {
+	padding: 20px;
+	text-align:justify;
+	font-family: "eurostile", sans-serif;
+font-weight: 600;
+font-style: normal;
+color: #FAEBD7;
+}
+
+	/* alinhamento do texto "softwares" na página */
+
+h2 {
+font-family: "vandertak-regular", sans-serif;
+	text-align: center;
+    font-size: 30px;
+	font-style: normal;
+}
+
+
+h1.trab {
+	margin-top: 20px;
+	text-align: center;
+    font-family: "kallisto", sans-serif;
+    color: white;
+    top: 50px;
+    font-size: 45px;
+    border: 2px;
+}  
+
+
+
+.container {
+	display: grid;
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+display: block;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #D2691E;
+  margin-left: auto;
+}
+
+.container:hover .overlay {
+  opacity: 0.7;
+}
+
+.text {
+  color: white;
+  font-size: 15px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  text-aling: justify;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+  .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto  ;
+  gap: 10px;
+  
+}
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 25px;
+}
+.item1 {
+  grid-row: 1 / 4;
+  //margin-left: 20px;
+}
+
+ 
+
+  	/* link para fontes */          
+
+</style>
+<link rel="stylesheet" href="https://use.typekit.net/wbl6mdu.css">
+</head>
 <body>
 
-<h2>HTML Forms</h2>
 
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+<!--criação de div para imagem de backgroud -->
+<div class="fundo" style="background-image: url('https://i.postimg.cc/QC3ScYyS/aesthetic-wallpaper-1.jpg');background-repeat: round;background-size: 100% 100%;align-items: center;display: flex;">
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+<h1>
+Sobre Mim
+
+</h1>
+
+
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at porta eros, id consequat urna. Integer vehicula leo vel egestas rhoncus. Ut egestas magna sit amet justo blandit, quis bibendum diam consectetur. Curabitur varius tempus fringilla. Donec turpis tortor, gravida eget ipsum ut, congue elementum justo. Aliquam eleifend semper diam in faucibus. Nullam libero arcu, pulvinar sit amet risus id, auctor dignissim odio. Pellentesque imperdiet ut nibh vel imperdiet. Phasellus vitae condimentum odio.
+
+
+
+
+</p>
+
+
+</div>
+
+
+<div class= "header">
+	<!-- html base para barra de navegação-->
+<ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#trabalho">Trabalhos</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+</div>
+
+
+
+<!-- criação de div para o backgroud -->
+
+<div style="background-color:#000000;">
+
+
+
+<br>
+
+
+<div class="trab">
+<h1 class="trab">
+
+<a nome="trabalho">
+
+Trabalhos
+
+</a>
+
+</h1>
+</div>
+
+
+<div class="grid-container">
+  <div><div class="container">
+  <img src="https://thumbs2.imgbox.com/12/8b/k7jzPSBB_t.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text" style="text-align:center;">Lorem ipsum dolor sit </div>
+  </div>
+</div></div>
+  <div><div class="container">
+  <img src="https://thumbs2.imgbox.com/04/ba/59w1vXnj_t.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text" style="text-align:center;">Lorem ipsum dolor sit </div>
+  </div>
+</div></div>
+  <div><div class="container">
+  <img src="https://thumbs2.imgbox.com/eb/aa/pOBp5pTM_t.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text" style="text-align:center;">Lorem ipsum dolor sit </div>
+  </div>
+</div></div>  
+  <div><div class="container">
+  <img src="https://thumbs2.imgbox.com/45/ef/aCnDj6ne_t.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text" style="text-align:center;">Lorem ipsum dolor sit </div>
+  </div>
+</div></div>
+  <div><div class="container">
+  <img src="https://thumbs2.imgbox.com/8d/1e/fXYexwj0_t.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text" style="text-align:center;">Lorem ipsum dolor sit .</div>
+  </div>
+</div></div>
+  <div><div class="container">
+  <img src="https://thumbs2.imgbox.com/ff/e8/15aUMn8K_t.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text" style="text-align:center;">Lorem ipsum dolor sit .</div>
+  </div>
+</div></div>
+
+</div>
+
+</div>
+
+<div>
+<div class="fundo" style="background-image: url('https://i.postimg.cc/QC3ScYyS/aesthetic-wallpaper-1.jpg');background-repeat: round;background-size: 100% 100%;align-items: center;display: flex;">
+<h1 class="contatos">
+CONTATOS
+</h1>
+<div class="grid-container">
+  <div class="item1"><img src="https://i.postimg.cc/T1KT5Lys/78796435f417bf19bccc531c34004764.jpg" alt="Paris" width="300" height="300"></div>
+  <div class="item2"><img src="https://i.postimg.cc/X7NJ4q79/Design-sem-nome-1-1.png" alt="image host" style="width:110px;height:70px;"></div>
+  <div class="item3">behance.net/cubismo</div>  
+  <div class="item4"><img src="https://i.postimg.cc/0QfsBGSF/Gmail-Logo.png" alt="image host" style="width:80px;height:50px;"></div>
+  <div class="item5">portfoliocubista@gmail.com</div>
+  <div class="item6"><img src="https://i.postimg.cc/XNRRkDtq/linkedin-83-sem-fundo.png" alt="image host" style="width:60px;height:60px;"></div>
+  <div class="item7">linkedin.com/in/cubismo</div>
+  
+</div>
+
+</div>
 
 </body>
 </html>
-
