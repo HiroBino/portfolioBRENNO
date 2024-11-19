@@ -1,303 +1,251 @@
-<!DOCTYPE> 
-<html>
-
-
-<head>
-<title>Cubismo Portifolio</title>
+<!DOCTYPE html>
+<html lang="pt-br">
 <style>
+/* Estilo Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-  margin: 0px;
-
-	/* estilização da barra de navegação */
-
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0;
+    margin: 0;
 }
 
-.header {
-  font-family: "kallisto", sans-serif;
+/* Header e Navegação */
+header {
+    font-family: "kallisto", sans-serif;
 font-weight: 600;
 font-style: normal;
-  padding: 0px;
-  text-align: left;
-  font-size: 25px;
-  color: white;
-  width: 100%;
+    background: #111;
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: fixed;
-  background-color: #000000;
-  width: 100%;
-  top: 0;
-} 
-
-  li {
-  display: inline;
-  float: left;
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 
-  li a {
-    display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+nav ul li {
+    margin: 0 15px;
 }
 
-  li a:hover {
-  	background-color: #000033;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
-	/* imagem de fundo */
+nav ul li a:hover {
+    color: #4682B4;
+}
 
-.fundinho {
-	max-width: 200%;
-  	height: 700px;
-    display: block;
-  }
+/* Seções */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
 
-
-
-	/* alinhamento do título "sobre mim" */
-
-h1 {
-	margin-top: 50px;
-	text-align: center;
+section h1 {
     font-family: "kallisto", sans-serif;
-    color: #ccccff;
-    font-size: 45px;
-}
-
-	/* alinhamento do texto corrido na página */
-
-p {
-	padding: 20px;
-	text-align:justify;
-	font-family: "eurostile", sans-serif;
-font-weight: 600;
 font-style: normal;
-color: #FAEBD7;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #4682B4;
 }
 
-.imgeu {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  border-radius: 50%;
+.content {
+    max-width: 1000px;
+    margin: 0 auto;		
 }
 
-
-h1.trab {
-	margin-top: 20px;
-	text-align: center;
+/* Seção Quem Sou Eu */
+#quem-sou p {
     font-family: "kallisto", sans-serif;
-    color: white;
-    top: 50px;
-    font-size: 45px;
-    border: 2px;
-}  
-
-
-
-.container {
-	display: grid;
-  position: relative;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+font-style: normal;
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #B0C4DE;
 }
 
-.image {
-display: block;
-  width: 100%;
-  height: auto;
-  margin-left: auto;
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    background-color: black;	
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #000033;
-  margin-left: auto;
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #111;
 }
 
-.container:hover .overlay {
-  opacity: 0.7;
+#quem-sou {
+    background-color: black;
 }
 
-.text {
-  color: white;
-  font-size: 15px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  text-aling: justify;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+/* Seção Meus Trabalhos */
+.portfolio {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
 }
 
-  .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto ;
-  gap: 20px;
-  padding: 20px;
+.project {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto  ;
-  gap: 10px;
-  
-}
-.grid-container > div {
-	font-family:"eurostile", sans-serif;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 25px;
-}
-.item1 {
-  grid-row: 1 / 4;
-  //margin-left: 20px;
+.project:hover {
+    transform: translateY(-10px);
 }
 
- 
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
 
-  	/* link para fontes */          
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
 
+.project p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Seção Contato */
+.contact-info {
+    font-family: "kallisto", sans-serif;
+font-style: normal;
+    list-style-type: none;
+    font-size: 1.2em;
+    color: #333;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+    color: #B0C4DE;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #ADD8E6;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #0077b5;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}
 </style>
 <link rel="stylesheet" href="https://use.typekit.net/wbl6mdu.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-image: url('https://i.postimg.cc/QC3ScYyS/aesthetic-wallpaper-1.jpg');background-size: 100% 100%;">
+    <header>
+        <nav>
+            
+            <ul>
+                <li><a href="#quem-sou">Quem Sou Eu</a></li>
+                <li><a href="#meus-trabalhos">Meus Trabalhos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section id="quem-sou">
+        <div class="content">
+            <h1>Quem Sou Eu</h1>
+            <div class="profile">
+                <img src="https://i.postimg.cc/fycrXY3r/Whats-App-Image-2024-11-06-at-14-09-09.jpg" alt="Minha Foto" class="profile-img">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque pellentesque lorem eu semper. Maecenas viverra purus sed augue tempor, eget tempor turpis euismod. Ut viverra justo at est ultrices, ac auctor diam suscipit. Phasellus suscipit nisl libero, ut faucibus enim sollicitudin et. Proin sodales odio dui, ac vulputate ante fermentum vel.  </p>
+            </div>
+        </div>
+    </section>
 
-<!--criação de div para imagem de backgroud -->
-<div class="fundinho" style="background-image: url('https://i.postimg.cc/QC3ScYyS/aesthetic-wallpaper-1.jpg');background-repeat: round;background-size: 100% 100%;">
+    <section id="meus-trabalhos">
+        <div class="content">
+            <h1>Meus Trabalhos</h1>
+            <div class="portfolio">
+                <div class="project">
+                    <iframe src="https://www.behance.net/embed/project/195510985?ilo0=1" height="316" width="250" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+                    <h3>Disco Boys of Fall</h3>
+                    <p>Descrição do projeto 1.</p>
+                </div>
+                <div class="project">
+                    <iframe src="https://www.behance.net/embed/project/195513875?ilo0=1"height="316" width="250" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+                    <h3>Convite Bela</h3>
+                    <p>Descrição do projeto 2.</p>
+                </div>
+                <div class="project">
+                    <iframe src="https://www.behance.net/embed/project/195511685?ilo0=1" height="316" width="250" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+                    <h3>Poster The Love Witch</h3>
+                    <p>Descrição do projeto 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="contato">
+        <div class="content">
+            <h1>Contato</h1>
+            <ul class="contact-info">
+                <li><strong>Telefone:</strong> (11) 96601-4154</li>
+                <li><strong>Email:</strong> contato.brenno2003@gmail.com</li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/brenno-silva-7730ba274/" target="_blank">linkedin.com/in/meuperfil</a></li>
+            </ul>
+        </div>
+    </section>
 
-<h1 style="text-align:center;">
-Sobre Mim
+    <footer>
+        <p>&copy; 2024 Meu Portfólio | Todos os direitos reservados</p>
+    </footer>
 
-</h1>
-
-
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at porta eros, id consequat urna. Integer vehicula leo vel egestas rhoncus. Ut egestas magna sit amet justo blandit, quis bibendum diam consectetur. Curabitur varius tempus fringilla. Donec turpis tortor, gravida eget ipsum ut, congue elementum justo. Aliquam eleifend semper diam in faucibus. Nullam libero arcu, pulvinar sit amet risus id, auctor dignissim odio. Pellentesque imperdiet ut nibh vel imperdiet. Phasellus vitae condimentum odio.
-
-
-
-
-</p>
-
-<img src="https://i.postimg.cc/gjGH26ZS/Whats-App-Image-2024-11-06-at-14-09-10.jpg" style="width:300px;height:300px;" class="imgeu">
-
-
-</div>
-
-
-<div class= "header">
-	<!-- html base para barra de navegação-->
-<ul>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#trabalho">Trabalhos</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-</div>
-
-
-
-<!-- criação de div para o backgroud -->
-
-<div style="background-color:#000000;">
-
-
-
-<br>
-
-
-<div class="trab">
-<h1 class="trab">
-
-<a nome="trabalho">
-
-Trabalhos
-
-</a>
-
-</h1>
-</div>
-
-
-<div class="grid-container">
-  <div><div class="container">
-  <img src="https://thumbs2.imgbox.com/12/8b/k7jzPSBB_t.jpg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text" style="text-align:center;">Lorem ipsum dolor sit </div>
-  </div>
-</div></div>
-  <div><div class="container">
-  <img src="https://thumbs2.imgbox.com/04/ba/59w1vXnj_t.jpg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text" style="text-align:center;">Lorem ipsum dolor sit </div>
-  </div>
-</div></div>
-  <div><div class="container">
-  <img src="https://thumbs2.imgbox.com/eb/aa/pOBp5pTM_t.jpg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text" style="text-align:center;">Lorem ipsum dolor sit </div>
-  </div>
-</div></div>  
-  <div><div class="container">
-  <img src="https://thumbs2.imgbox.com/45/ef/aCnDj6ne_t.jpg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text" style="text-align:center;">Lorem ipsum dolor sit </div>
-  </div>
-</div></div>
-  <div><div class="container">
-  <img src="https://thumbs2.imgbox.com/8d/1e/fXYexwj0_t.png" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text" style="text-align:center;">Lorem ipsum dolor sit .</div>
-  </div>
-</div></div>
-  <div><div class="container">
-  <img src="https://thumbs2.imgbox.com/ff/e8/15aUMn8K_t.jpg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text" style="text-align:center;">Lorem ipsum dolor sit .</div>
-  </div>
-</div></div>
-
-</div>
-
-</div>
-
-<div>
-<div class="fundo" style="background-image: url('https://i.postimg.cc/QC3ScYyS/aesthetic-wallpaper-1.jpg');background-repeat: round;background-size: 100% 100%;align-items: center;display: flex;">
-<h1 class="contatos">
-CONTATOS
-</h1>
-<div class="grid-container">
-  <div class="item1"><img src="https://i.postimg.cc/T1KT5Lys/78796435f417bf19bccc531c34004764.jpg" alt="Paris" width="300" height="300"></div>
-  <div class="item2"><img src="https://i.postimg.cc/X7NJ4q79/Design-sem-nome-1-1.png" alt="image host" style="width:110px;height:70px;"></div>
-  <div class="item3">behance.net/cubismo</div>  
-  <div class="item4"><img src="https://i.postimg.cc/0QfsBGSF/Gmail-Logo.png" alt="image host" style="width:80px;height:50px;"></div>
-  <div class="item5">portfoliocubista@gmail.com</div>
-  <div class="item6"><img src="https://i.postimg.cc/XNRRkDtq/linkedin-83-sem-fundo.png" alt="image host" style="width:60px;height:60px;"></div>
-  <div class="item7">linkedin.com/in/cubismo</div>
-  
-</div>
-
-</div>
-
-</body>
 </html>
